@@ -157,6 +157,7 @@ function drawVisualizer() {
 
 audio.onplay = () => {
     if (audioContext.state === 'suspended') {
+        audio.volume = volumeControl.value;
         audioContext.resume();
     }
     drawVisualizer();
