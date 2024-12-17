@@ -11,8 +11,8 @@ const visualizer = document.getElementById('visualizer');
 const canvasContext = visualizer.getContext('2d');
 
 const tracks = [
-    { title: "Aegir", src: "audio/Aegir.mp3", cover: "images/Aegir.png" },
-    { title: "Memory", src: "audio/Memory.mp3", cover: "images/Memory.png" },
+    { title: "Aegir", src: "audio/Aegir.mp3", cover: "images/aegir.png" },
+    { title: "Memory", src: "audio/Memory.mp3", cover: "images/memory.png" },
 ];
 let currentTrackIndex = 0;
 
