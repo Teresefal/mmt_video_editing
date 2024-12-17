@@ -92,9 +92,6 @@ let rows = Math.floor(visualizer.height / gridSize);
 visualizer.width = window.innerWidth;
 visualizer.height = window.innerHeight;
 
-// Массив цветов для каждого квадрата (все начальные цвета — rgb(28, 28, 28))
-let squareColors = Array(rows * columns).fill('rgb(28, 28, 28)');
-
 // Генерация случайного индекса частоты для каждого квадрата
 function generateRandomFrequencyIndex() {
     return Math.floor(Math.random() * (analyser.frequencyBinCount / 2)); // Ограничиваем диапазон
@@ -117,7 +114,7 @@ window.addEventListener('resize', () => {
     visualizer.height = window.innerHeight;
     columns = Math.floor(visualizer.width / gridSize);
     rows = Math.floor(visualizer.height / gridSize);
-    squareColors = Array(rows * columns).fill('rgb(28, 28, 28)');
+    squareColors = Array(rows * columns).fill('rgb(36, 36, 36)');
     initializeFrequencyIndexes();
 });
 
@@ -139,7 +136,6 @@ function drawVisualizer() {
             const x = col * gridSize;
             const y = row * gridSize;
 
-            // Начальный цвет квадрата — темно-серый (rgb(28, 28, 28))
             const squareColor = squareColors[squareIndex];
 
             // Рассчитываем яркость для квадрата на основе частоты
