@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея изображений</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="gallery">
+        <img id="image-display" src="images/cover1.jpg" alt="Audio Cover">
+        <div id="audio-info">
+            <p id="track-title">Название трека</p>
+            <div id="audio-player">
+                <button onclick="previousTrack()">&#9664;</button>
+                <button id="play-pause" onclick="togglePlayPause()">&#9658;</button>
+                <button onclick="nextTrack()">&#9654;</button>
+                <input type="range" id="seek-bar" value="0">
+                <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+                <input type="range" id="volume-control" min="0" max="1" step="0.01" value="0.1">
+            </div>
+        </div>
+    </div>
+
+    <audio id="audio"></audio>
+    <canvas id="visualizer"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>

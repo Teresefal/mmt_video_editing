@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: rgb(28, 28, 28);
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+#image-display {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#audio-info {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#track-title {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+/* Стили аудиоплеера */
+#audio-player {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#play-pause, #audio-player button {
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: #8604d6;
+    cursor: pointer;
+}
+
+#seek-bar {
+    width: 200px;
+    appearance: none;
+    background: #555;
+    height: 5px;
+    border-radius: 5px;
+    outline: none;
+}
+
+#seek-bar::-webkit-slider-thumb {
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    background: #8604d6;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#current-time, #duration {
+    font-size: 14px;
+}
+
+#border-visualization {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    border: 5px solid #8604d6;
+    pointer-events: none;
+}
+
+#volume-control {
+    width: 100px;
+    appearance: none;
+    background: #555;
+    height: 5px;
+    border-radius: 5px;
+    outline: none;
+    margin-left: 10px;
+}
+
+#volume-control::-webkit-slider-thumb {
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    background: #8604d6;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#border-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+/* Add this to your CSS */
+#visualizer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+#gallery {
+    position: relative;
+    z-index: 1;
+}
